@@ -15,9 +15,14 @@ require 'unirest'
 # p response.body
 
 # update action
-response = Unirest.patch("http://localhost:3000/api/contacts/4",
-  parameters: {
-    input_phone_number: "33349724"
-  }
-  )
-p response.body
+# response = Unirest.patch("http://localhost:3000/api/contacts/4",
+#   parameters: {
+#     input_phone_number: "33349724"
+#   }
+#   )
+# p response.body
+
+
+# delete action (deleted item #4)
+# response = Unirest.delete("http://localhost:3000/api/contacts/4")
+# p response.body
