@@ -20,4 +20,15 @@ class Api::ContactsController < ApplicationController
     @contact1.save
     render "show.json.jbuilder"
   end
+
+  def update
+    contact_id = params[:id]
+    @contact1 = Contact.find_by(id:contact_id)
+    @contact1.first_name = params[:input_first_name] || @contact1.first_name
+    @contact1.last_name = params[:input_last_name] || @contact1.last_name
+    @contact1.email = params[:input_email] || @contact1.email
+    @contact1.phone_number = params[:input_phone_number] || @contact1.phone_number
+    @contact1.save
+    render "show.json.jbuilder"
+  end
 end
