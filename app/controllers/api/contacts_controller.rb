@@ -1,9 +1,12 @@
 class Api::ContactsController < ApplicationController
-  def one_contact_action
-    @contact1 = Contact.first
-    render "one_contact_view.json.jbuilder"
+  def index
+    @contacts = Contact.all 
+    render "contacts.json.jbuilder"
   end
-  def all_contacts_action
-    
-  end 
+
+  def show
+    contact_id = params[:id]
+    @contact1 = Contact.find_by(id: contact_id)
+    render "show.json.jbuilder"
+  end
 end
