@@ -2,6 +2,7 @@ require 'unirest'
 
 
 # create action 
+
 # p "enter new first_name, last_name, email, phone_number:"
 # response = Unirest.post("http://localhost:3000/api/contacts",
 #   parameters: {
@@ -11,7 +12,6 @@ require 'unirest'
 #     phone_number: gets.chomp
 #   }
 #   )
-
 # p response.body
 
 # update action
@@ -24,5 +24,5 @@ require 'unirest'
 
 
 # delete action (deleted item #4)
-# response = Unirest.delete("http://localhost:3000/api/contacts/4")
+# response = Unirest.delete("http://localhost:3000/api/contacts/7")
 # p response.body

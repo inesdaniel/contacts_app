@@ -5,3 +5,4 @@ json.array! @contacts.each do |contact|
   json.email contact.email
   json.phone_number contact.phone_number
 end
+
