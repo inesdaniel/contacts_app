@@ -7,3 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #contact3 = Contact.new({first_name: "jane", last_name: "doe", email: "janedoe@gmail.com", phone_number: "33343984"})
+
+users = User.all
+contacts = Contact.all 
+
+contacts.each do |contact|
+  contact.user_id = users.sample.id 
+  contact.save 
+end
